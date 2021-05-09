@@ -1,0 +1,85 @@
+PHP 
+
+variable = toujours un dollars avant le nomvariable
+
+Lorsque l'on désire affecter une chaîne de caractères à une variable, il faut placer cette chaîne de caractères entre deux ".
+Lorsque l'on désire affecter une valeur numérique à une variable, il ne faut pas placer de " autour cette valeur (en fait, c'est possible de mettre des " autour d'une valeur numérique, mais ensuite, il faut être vraiment vigilent, car on pourrait faire la confusion entre une valeur numérique et une chaîne de caractères).
+
+
+<?php
+$fruit = Array();
+$fruit[0] = "fraise";
+$fruit[1] = "banane";
+$fruit[2] = "abricot";
+?>
+
+exemple tableau 
+
+
+mettre un ; a chaque fin de ligne (instruction php)
+
+afficher la date du jour 
+<?php
+$date_du_jour = date ("d-m-Y");
+$heure_courante = date ("H:i");
+echo 'Nous sommes le : ';
+echo $date_du_jour;
+echo ' Et il est : ';
+echo $heure_courante;
+?>
+
+
+Dans ce cas, nous venons d'utiliser la fonction date() qui nous permet d'afficher la date du jour ainsi que l'heure courante (en fait, la date du serveur). Dans un premier temps, nous avons affecté à la variable $date_du_jour le contenu que retourne la fonction date() munie des paramètres "d-m-Y", soit 17-09-2002, puis nous avons affecté à la variable $heure_courante le contenu que retourne la fonction date() munie des paramètres "H:i", soit 12:10.
+
+
+
+
+<?php
+$nom = "LA GLOBULE";
+echo 'Bonjour '.$nom.' !';
+?>
+
+concatener 2 chaines 
+
+
+
+
+Etudions maintenant tous les paramètres possibles de la fonction fopen() :
+r : ouvre en lecture seule, et place le pointeur de fichier au début du fichier.
+r+ : ouvre en lecture et écriture, et place le pointeur de fichier au début du fichier.
+w : ouvre en écriture seule; place le pointeur de fichier au début du fichier et réduit la taille du fichier à 0. Si le fichier n'existe pas, on tente de le créer.
+w+ : ouvre en lecture et écriture; place le pointeur de fichier au début du fichier et réduit la taille du fichier à 0. Si le fichier n'existe pas, on tente de le créer.
+a : ouvre en écriture seule; place le pointeur de fichier à la fin du fichier file. Si le fichier n'existe pas, on tente de le créer.
+a+ : ouvre en lecture et écriture; place le pointeur de fichier à la fin du fichier. Si le fichier n'existe pas, on tente de le créer.
+
+
+
+
+exemple1.php
+<html>
+<head>
+<title>Ma page de test</title>
+</head>
+<body>
+<form action = "traitement.php" method="post">
+Votre nom : <input type = "text" name = "nom"><br />
+Votre fonction : <input type = "text" name = "fonction"><br />
+<input type = "submit" value = "Envoyer">
+</form>
+</body>
+</html>
+
+
+
+
+
+pour récupérer votre fichier, vous avez à votre disposition le tableau $_FILES qui aura plusieurs entrées :
+$_FILES['mon_fichier']['tmp_name'] : le nom temporaire du fichier sur le serveur
+$_FILES['mon_fichier']['name'] : le nom original du fichier sur la machine cliente
+$_FILES['mon_fichier']['type'] : le type MIME du fichier
+$_FILES['mon_fichier']['size'] : la taille du fichier
+
+
+
+Naturellement, vous pourrez utiliser ces valeurs pour tester votre fichier.
+Si il correspond à vos attentes, vous pourrez finaliser votre téléchargement à l'aides des fonctions copy ou move_uploaded_file (afin de copier le fichier téléchargé sur le disque dur du serveur).

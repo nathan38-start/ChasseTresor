@@ -1,0 +1,82 @@
+#coffre {
+color:black;
+background-color:rgb(0, 0, 0);
+background-image:url"(coffre.jpg)";
+float:right
+}
+
+#play {
+    
+    width: 10px;
+	height: 10px;
+    max-width: 100%;
+    float: left
+
+}
+
+td {
+    width: 100px;
+	height: 100px;
+    max-width: 100%;
+    border-width: 1px;
+    border-color: rgb(255, 123, 0);
+    border-style: solid;
+    
+}
+
+.jeux {
+    width: 180px;
+	height: 70px;
+    max-width: 100%;
+    border-width: 1px;
+    border-color:#000000 ;
+    border-style: solid;
+}
+
+.cursor {
+    width: 40px;
+    height: 40px;
+    cursor: none;
+    border: 1px dashed white;
+    position: absolute ;
+}
+
+.cursos::before {
+    content: '';
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: crimson;
+    border-radius: 50%;
+}
+
+#emplacement {
+background: url(carte.jpg);
+border-width: 1px;
+border-color: black;
+border-style: solid;
+border-collapse: collapse;
+}
+
+
+/* Gestion des blocs de classe "cadre" */
+.cadre {
+    display: inline-block;
+    width: 1700px;
+    /*margin: 1em;*/
+    font-size: 180px;
+    }
+
+
+
+
+
+   
+
+
+
+
+

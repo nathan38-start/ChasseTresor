@@ -1,0 +1,15 @@
+reverse = permet de renverser
+
+
+display : flex;  (prend plus toute la largeur)
+
+flex-direction: row; (permet de faire un axe linéaire) 
+
+flex-direction: column; (permet de faire un axe verticale)
+
+-
+-
+-
+-
+
+si je veux pas que les éléments sortent : j'utilise flex-wrap : wrap;
