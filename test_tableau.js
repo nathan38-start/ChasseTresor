@@ -5,8 +5,6 @@ var nbMax=9 ;
 var tresorX ;
 var tresorY ;
 
-
-
 //Création du tableau (en mémoire)
 function Tab2D(x, y) {
 	var table = new Array(x);
@@ -18,6 +16,7 @@ function Tab2D(x, y) {
 
 //Fonction d'initialisation du jeu
 function init() {
+	//Création et récupération du tableau (en mémoire) dans une variable "globale"
 	TableauJeu=Tab2D(10, 10) ;
 
 	//Définir l'emplacement du trésor avec un Random
@@ -26,9 +25,9 @@ function init() {
 
 	//Ajouter le trésor dans le tableau (en mémoire)
 	TableauJeu[tresorX][tresorY]=tresorCarte ;
-	console.log(TableauJeu) ;
+	//console.log(TableauJeu) ;
 
-	//Générer le tableau en html
+	//Générer le tableau en html (i=numéro de ligne / h numéro de colonne) => départ à 0
 	for(var i=0; i<=9;i++)
 	{
 		//création de la ligne
@@ -47,11 +46,11 @@ function init() {
 
 // choix() récupère l'ID de la case cliquée et traite le résultat
 function choix(idCase) {
-	console.log("Case clic"+idCase) ;
+	//console.log("Case clic"+idCase) ;
 	var idX=idCase[0] ;
 	var idY=idCase[2] ;
 
-	console.log("coordonnées trésor"+tresorX+"y"+tresorY) ;
+	//console.log("coordonnées trésor"+tresorX+"y"+tresorY) ;
 	if(TableauJeu[idX][idY]=="Trésor")
 	{
 		console.log("Le trésor est ici") ; 
