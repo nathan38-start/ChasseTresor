@@ -43,7 +43,8 @@ function init() {
 		//ajout de la ligne au tableau
 		document.getElementById("carte").innerHTML+=ligneTab ;
 	}
-	
+
+}
 /*
 // creation par Sebastien meunier et Nathan Varin
 // derniere modification = 26/04/2021
