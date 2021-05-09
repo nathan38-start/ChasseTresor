@@ -1,16 +1,23 @@
-#coffre {
-color:black;
-background-color:rgb(0, 0, 0);
-background-image:url"(coffre.jpg)";
-float:right
+body 
+{
+    background-image: url("carte.jpg");
 }
 
+h1
+{
+    background-color: red;
+}
+
+table
+{
+    background-color: white;
+}
 #play {
     
     width: 10px;
 	height: 10px;
     max-width: 100%;
-    float: left
+    float: left ;
 
 }
 
@@ -54,7 +61,6 @@ td {
 }
 
 #emplacement {
-background: url(carte.jpg);
 border-width: 1px;
 border-color: black;
 border-style: solid;

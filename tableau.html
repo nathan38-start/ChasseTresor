@@ -6,35 +6,22 @@
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="coffre.jpg">
     <link rel="stylesheet" type="text/css" href="fond.css" media="screen" />
-    
 
 </head>
 
-<body>
+<body onload="init()">
     <h1>L'ile au trésor</h1>
     <div class="cursus"></div>
 
     <p>Nombre de coup(s) que vous avez joué : <span id="compte"></span></p>
     <hr>
-        <div id ="emplacement" class="cadre">
-        
+    <div id ="emplacement" class="cadre">   
     </div>
 
-        
-        tableau 
+    <table id="carte">
+    </table>
 
-        </div>
-       
-            <table><tr>
-            <td class="Mauvaise"></td>
-            <td>pas la bonne casse</td>
-            <td class="Bon"></td>
-            <td>Bonne case</td></tr>
-        </table>
-                
-        </div>
-        <script type="text/javascript" src="test_tableau.js"></script>
+    <script type="text/javascript" src="test_tableau.js"></script>
   
 </body>
-
 </html>
