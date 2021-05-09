@@ -1,9 +1,10 @@
 //Variables globales
 var TableauJeu ;
 var tresorCarte="Trésor" ;
-var nbMax=10 ;
+var nbMax=9 ;
 var tresorX ;
 var tresorY ;
+
 
 
 //Création du tableau (en mémoire)
@@ -29,25 +30,21 @@ function init() {
 	console.log(TableauJeu) ;
 
 	//Générer le tableau en html
-	var carteHTML=document.getElementById("carte") ;
-	for(var i=0; i<10;i++)
+	for(var i=0; i<=9;i++)
 	{
-
+		//création de la ligne
+		var ligneTab="<tr>" ;
+		for(var h=0; h<=9;h++)
+		{
+			//ajouter les colonnes
+			ligneTab+="<td>"+i+h+"</td>" ;
+		}
+		ligneTab+="</tr>" ;
+		//ajout de la ligne au tableau
+		document.getElementById("carte").innerHTML+=ligneTab ;
 	}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
+	
+/*
 // creation par Sebastien meunier et Nathan Varin
 // derniere modification = 26/04/2021
 // va créer un tableau en 2 dimensions sur la page html
@@ -67,7 +64,7 @@ function Tableau2D(ligne, colonne, emplacement) {
 	document.getElementById(emplacement).innerHTML = texte;
 }
 
-/*
+
 // choix() récupère l'ID de la case cliquée et traite le résultat
 function choix(that) {
 	console.log(that)
