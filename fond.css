@@ -1,16 +1,7 @@
-body 
-{
-    background-image: url("carte.jpg");
-}
-
-h1
-{
-    background-color: red;
-}
-
 table
 {
-    background-color: white;
+    background-image: url("carte.jpg");
+    margin:0 ;
 }
 #play {
     
