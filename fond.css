@@ -76,7 +76,13 @@ border-collapse: collapse;
     }
 
    
-
+/* Couleurs des cases, avec opacité de 0.9 */
+.bad {
+    background:rgba(200,0,0,0.9);
+    }
+.good {
+    background:green
+    }
 
 
 
