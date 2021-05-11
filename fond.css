@@ -2,6 +2,8 @@ table
 {
     background-image: url("carte.jpg");
     margin:0 ;
+     width: 100%;
+    height: 1000px; 
 }
 #play {
     
@@ -81,9 +83,12 @@ border-collapse: collapse;
     background:rgba(200,0,0,0.9);
     }
 .good {
-    background:green
+    background:green ; 
     }
+.bonneColonne {
+    background-color: orange;
 
+}
 
 
 

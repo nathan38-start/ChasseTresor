@@ -59,10 +59,25 @@ function choix(idCase) {
 		//soit redirection vers une autre page pour anoncer la victoire et afficher le score
 		//ou alors modifier le texte du nombre de points pour afficher un message de victoire
 	}
+	else{
+	//la case ne contient pas le trésor
+		if(idY==tresorY) {
+			//si la case cliquée est dans la bonne colonne 
+			var caseClic=document.getElementById(idX +"-" + idY);
+			console.log(caseClic);
+			caseClic.classList.add("bonneColonne");	
+		}
+		else if (idX==tresorX){ 
+			//si la case cliquée est dans la bonne ligne 
+			
+		}
+		else {
+			//si ce n'est pas le trésor alors 
+			
+		}
+	}
+}
 	
-	//si ce n'est pas le trésor alors 
 		//si la case cliquée est dans la bonne colonne => ajouter une classe et faire un traitement avec le css => modifer la couleur de la case
 		//si la case cliquée est dans la bonne ligne => ajouter une classe et faire un traitement avec le css => modifer la couleur de la case
 		//si la case n'a rien à voir => ajouter une classe et faire un traitement avec le css => modifer la couleur de la case
-
-}
