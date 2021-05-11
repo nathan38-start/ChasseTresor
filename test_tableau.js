@@ -28,13 +28,14 @@ function init() {
 	//console.log(TableauJeu) ;
 
 	//Générer le tableau en html (i=numéro de ligne / h numéro de colonne) => départ à 0
+	//Création de la ligne
 	var ligneTab="" ;
 	for(var i=0; i<=9;i++)
 	{
 		ligneTab+="<tr>"
 		for(var h=0; h<=9;h++)
 		{
-			//création de la ligne et des colonnes
+			//création des colonnes
 			ligneTab+='<td onclick="choix(this.id)" id='+i+"-"+h+'></td>' ;
 		}
 		ligneTab+="</tr>" ;
