@@ -63,13 +63,20 @@ border-collapse: collapse;
 .cadre {
     display: inline-block;
     width: 1700px;
+}
+
+
     /*margin: 1em;*/
     font-size: 180px;
+    
+/* Largeur et hauteur des cases de la grille */
+    td {
+    width:40px;
+    height:40px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
     }
-
-
-
-
 
    
 
