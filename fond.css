@@ -82,12 +82,15 @@ border-collapse: collapse;
 .bad {
     background:rgba(200,0,0,0.9);
     }
-.bonneLigne {
-    background:rgb(0, 255, 64) ; 
-    }
-.bonneColonne {
+
+.bonneColonne, .bonneLigne {
     background-color: orange;
 
+}
+
+.tresor
+{
+    background-color:green ;
 }
 .index{
     background-image:("fond.jpg")

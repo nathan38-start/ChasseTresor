@@ -49,16 +49,16 @@ function init() {
 // choix() récupère l'ID de la case cliquée et traite le résultat
 function choix(idCase) {
 	//console.log("Case clic"+idCase) ;
-	console.log("Case clic "+idCase);
     tabCoordonnees = idCase.split("-");
     var idX=tabCoordonnees[0] ;
     var idY=tabCoordonnees[1] ;
     console.log("X: "+idX+"  Y: "+idY) ;
+	var caseClic=document.getElementById(idX +"-" + idY);
 
-	//console.log("coordonnées trésor"+tresorX+"y"+tresorY) ;
 	if(TableauJeu[idX][idY]=="Trésor")
 	{
-		console.log("Le trésor est ici") ; 
+		//la case contient le trésor
+		caseClic.classList.add("tresor");	
 		//soit redirection vers une autre page pour anoncer la victoire et afficher le score
 		//ou alors modifier le texte du nombre de points pour afficher un message de victoire
 	}
@@ -66,23 +66,15 @@ function choix(idCase) {
 	//la case ne contient pas le trésor
 		if(idY==tresorY) {
 			//si la case cliquée est dans la bonne colonne 
-			var caseClic=document.getElementById(idX +"-" + idY);
-			console.log(caseClic);
 			caseClic.classList.add("bonneColonne");	
 		}
 		else if (idX==tresorX){ 
 			//si la case cliquée est dans la bonne ligne
-			var caseClic=document.getElementById(idX +"-" + idY);
 			console.log(caseClic);
-			caseClic.classList.add("bonneColonne");	 
-			
+			caseClic.classList.add("bonneLigne");	 
 		}
 		else {
-			var caseClic=document.getElementById(idX +"-" + idY);
-			console.log(caseClic);
 			caseClic.classList.add("bad");
-			 
-			
 		}
 	}
 }
