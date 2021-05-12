@@ -49,8 +49,11 @@ function init() {
 // choix() récupère l'ID de la case cliquée et traite le résultat
 function choix(idCase) {
 	//console.log("Case clic"+idCase) ;
-	var idX=idCase[0] ;
-	var idY=idCase[2] ;
+	console.log("Case clic "+idCase);
+    tabCoordonnees = idCase.split("-");
+    var idX=tabCoordonnees[0] ;
+    var idY=tabCoordonnees[1] ;
+    console.log("X: "+idX+"  Y: "+idY) ;
 
 	//console.log("coordonnées trésor"+tresorX+"y"+tresorY) ;
 	if(TableauJeu[idX][idY]=="Trésor")
