@@ -71,11 +71,17 @@ function choix(idCase) {
 			caseClic.classList.add("bonneColonne");	
 		}
 		else if (idX==tresorX){ 
-			//si la case cliquée est dans la bonne ligne 
+			//si la case cliquée est dans la bonne ligne
+			var caseClic=document.getElementById(idX +"-" + idY);
+			console.log(caseClic);
+			caseClic.classList.add("bonneColonne");	 
 			
 		}
 		else {
-			//si ce n'est pas le trésor alors 
+			var caseClic=document.getElementById(idX +"-" + idY);
+			console.log(caseClic);
+			caseClic.classList.add("bad");
+			 
 			
 		}
 	}
