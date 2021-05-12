@@ -87,4 +87,4 @@ function choix(idCase) {
 	
 		//si la case cliquée est dans la bonne colonne => ajouter une classe et faire un traitement avec le css => modifer la couleur de la case
 		//si la case cliquée est dans la bonne ligne => ajouter une classe et faire un traitement avec le css => modifer la couleur de la case
-		//si la case n'a rien à voir => ajouter une classe et faire un traitement avec le css => modifer la couleur de la case
+	}	//si la case n'a rien à voir => ajouter une classe et faire un traitement avec le css => modifer la couleur de la case
