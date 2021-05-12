@@ -78,21 +78,22 @@ border-collapse: collapse;
     }
 
    
-/* Couleurs des cases, avec opacité de 0.9 */
+/* Couleurs des cases */
 .bad {
-    background:rgba(200,0,0,0.9);
+    background-color: red;
     }
 
 .bonneColonne, .bonneLigne {
     background-color: orange;
-
 }
 
 .tresor
 {
     background-color:green ;
 }
-.index{
+
+.index
+{
     background-image:("fond.jpg")
 }
 
