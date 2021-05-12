@@ -82,8 +82,8 @@ border-collapse: collapse;
 .bad {
     background:rgba(200,0,0,0.9);
     }
-.good {
-    background:green ; 
+.bonneLigne {
+    background:orange ; 
     }
 .bonneColonne {
     background-color: orange;
