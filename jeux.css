@@ -3,6 +3,10 @@ p
     display:inline-block ;
 }
 
+#legende {
+    font-size: 50px;
+}
+
 #carte
 {
     background-image: url("carte.jpg");
@@ -10,7 +14,6 @@ p
     width: 100%;
     height: 500px; 
 }
-
   
 /* Largeur et hauteur des cases de la grille */
 td {
@@ -22,43 +25,19 @@ td {
 }
    
 /* Couleurs des cases */
-.bad {
-    background-color: red;
-    }
-
- .bonneLigne {
-    background-color: orange;
+#orange, .bonneLigne  {
+ background-color:orange;
 }
-.bonneColonne{
+
+#jaune, .bonneColonne{
     background-color: yellow;
 }
-.tresor
-{
-    background-color:green ;
+
+#rouge, .bad {
+    background-color: red;
 }
 
-.index
-{
-    background-image:("fond.jpg")
-}
-
-#vert {
+#vert, .tresor {
     background-color: green;
 }
-.orange {
- background-color:orange;
 
-}
-#rouge{
-    background-color: red;
-}
-#legende {
-    font-size: 50px;
-
-}
-#legende td {
-    width: 500px;
-}
-.jaune{
-    background-color: yellow;
-}
