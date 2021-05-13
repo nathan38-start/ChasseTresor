@@ -4,6 +4,7 @@ var tresorCarte="Trésor" ;
 var nbMax=9 ;
 var tresorX ;
 var tresorY ;
+var scoreJoueur ;
 
 //Création du tableau (en mémoire)
 function Tab2D(x, y) {
@@ -16,6 +17,12 @@ function Tab2D(x, y) {
 
 //Fonction d'initialisation du jeu
 function init() {
+	//Remise de la partie à zéro (supprimer le bouton, vider le tableau pour laisser la place aux nouvelles cases, remise du score à 0)
+	document.getElementById("bouttonInit").innerHTML="" ;
+	document.getElementById("carte").innerHTML="" ;
+	document.getElementById("scoreJoueur").innerHTML="0"  ;
+	scoreJoueur=0 ;
+
 	//Création et récupération du tableau (en mémoire) dans une variable "globale"
 	TableauJeu=Tab2D(10, 10) ;
 
@@ -36,7 +43,7 @@ function init() {
 		for(var h=0; h<=9;h++)
 		{
 			//création des colonnes
-			ligneTab+='<td onclick="choix(this.id)" id='+i+"-"+h+'></td>' ;
+			ligneTab+='<td class="caseCarte" onclick="choix(this.id)" id='+i+"-"+h+'></td>' ;
 		}
 		ligneTab+="</tr>" ;
 		
@@ -48,45 +55,49 @@ function init() {
 
 // choix() récupère l'ID de la case cliquée et traite le résultat
 function choix(idCase) {
-	var score = document.getElementById('leScore').innerHTML.split(':');
-	var leScore = Number(score[1]);
-
-	//console.log("Case clic"+idCase) ;
     tabCoordonnees = idCase.split("-");
     var idX=tabCoordonnees[0] ;
     var idY=tabCoordonnees[1] ;
-    console.log("X: "+idX+"  Y: "+idY) ;
+
 	var caseClic=document.getElementById(idX +"-" + idY);
 
 	if(TableauJeu[idX][idY]=="Trésor")
 	{
-		leScore += 50;
+		scoreJoueur += 50;
 		//la case contient le trésor
-		caseClic.classList.add("tresor");	
-		//soit redirection vers une autre page pour anoncer la victoire et afficher le score
+		caseClic.classList.add("tresor");
+		//Empecher l'utilisateur de cliquer à nouveau
+		//Récupérer les td dans un tableau
+		var tabTd= document.getElementsByClassName("caseCarte");
+		//retirer pour chaque case sa capacité à être cliquable
+		for (var i=0 ; i<tabTd.length ;i++)
+		{
+			tabTd[i].removeAttribute("onclick") ;
+		}
 
+		//Proposition de reccomencer le jeu
+		document.getElementById("bouttonInit").innerHTML+='<button onclick="init()">Recommencer le jeu</button>' ;
 	}
 	else{
 	//la case ne contient pas le trésor
 		if(idY==tresorY) {
-			leScore += 10;
+			scoreJoueur += 10;
 			//si la case cliquée est dans la bonne colonne 
 			caseClic.classList.add("bonneColonne");	
 		}
 		else if (idX==tresorX){ 
-			leScore += 10;
+			scoreJoueur += 10;
 			//si la case cliquée est dans la bonne ligne
-			console.log(caseClic);
+			//console.log(caseClic);
 			caseClic.classList.add("bonneLigne");	 
 		}
 		else {
 			caseClic.classList.add("bad");
-			leScore -= 2;
+			scoreJoueur -= 2;
 		}
 		
-	}	//ajout du score à la variable score
-	score[1] = leScore;
-	// affichage du nouveau score 
-	document.getElementById('leScore').innerHTML = score.join(':');
+	}
+	//Afficher le nouveau score
+	document.getElementById('scoreJoueur').innerHTML=scoreJoueur ;
 
 }

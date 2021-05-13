@@ -1,4 +1,9 @@
-table#carte
+p 
+{
+    display:inline-block ;
+}
+
+#carte
 {
     background-image: url("carte.jpg");
     margin:0 ;

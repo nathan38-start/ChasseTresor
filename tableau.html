@@ -11,12 +11,14 @@
 
 <body onload="init()">
     <h1>L'ile au trésor</h1>
-    <div class="cursus"></div>
-
-    <div id='leScore'>Votre score: 0</div> 
-    <hr>
-    <div id ="emplacement" class="cadre"> 
-        <table id = 'legende'>
+    <div id="scoreBouton">
+        <p>Votre score : </p>
+        <p id="scoreJoueur">0</p>
+        <div id="bouttonInit">
+        </div>
+    </div> 
+    <div> 
+        <table id ="legende">
             <thead>
                 <tr>
                     <th> Légende </th>
@@ -39,7 +41,7 @@
             </tbody>
         </table>
     </div>
-    
+    <hr>
     <table id="carte"></table>  
     <script type="text/javascript" src="test_tableau.js"></script>
    
