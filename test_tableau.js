@@ -48,8 +48,8 @@ function init() {
 
 // choix() récupère l'ID de la case cliquée et traite le résultat
 function choix(idCase) {
-	let score = document.getElementById('leScore').innerHTML.split(':');
-	let leScore = Number(score[1]);
+	var score = document.getElementById('leScore').innerHTML.split(':');
+	var leScore = Number(score[1]);
 
 	//console.log("Case clic"+idCase) ;
     tabCoordonnees = idCase.split("-");
@@ -64,7 +64,7 @@ function choix(idCase) {
 		//la case contient le trésor
 		caseClic.classList.add("tresor");	
 		//soit redirection vers une autre page pour anoncer la victoire et afficher le score
-		//ou alors modifier le texte du nombre de points pour afficher un message de victoire
+
 	}
 	else{
 	//la case ne contient pas le trésor
@@ -85,8 +85,8 @@ function choix(idCase) {
 		}
 		
 	}	//ajout du score à la variable score
-	score[score.length-1] = String(" "+leScore);
-	// affichage du nouvea score 
+	score[1] = leScore;
+	// affichage du nouveau score 
 	document.getElementById('leScore').innerHTML = score.join(':');
 
 }

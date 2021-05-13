@@ -53,19 +53,6 @@ td {
     border-radius: 50%;
 }
 
-#emplacement {
-border-width: 1px;
-border-color: black;
-border-style: solid;
-border-collapse: collapse;
-}
-
-
-/* Gestion des blocs de classe "cadre" */
-.cadre {
-    display: inline-block;
-    width: 1700px;
-}
 
     
 /* Largeur et hauteur des cases de la grille */
@@ -83,10 +70,12 @@ border-collapse: collapse;
     background-color: red;
     }
 
-.bonneColonne, .bonneLigne {
+ .bonneLigne {
     background-color: orange;
 }
-
+.bonneColonne{
+    background-color: yellow;
+}
 .tresor
 {
     background-color:green ;
@@ -97,20 +86,23 @@ border-collapse: collapse;
     background-image:("fond.jpg")
 }
 
-td#vert {
+#vert {
     background-color: green;
 }
-td.orange {
+.orange {
  background-color:orange;
 
 }
-td#rouge{
+#rouge{
     background-color: red;
 }
-table#legende {
+#legende {
     font-size: 50px;
 
 }
-table#legende td {
+#legende td {
     width: 500px;
+}
+.jaune{
+    background-color: yellow;
 }
