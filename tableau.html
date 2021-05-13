@@ -5,43 +5,37 @@
     <title>L'ile au trésor</title>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="coffre.jpg">
-    <link rel="stylesheet" type="text/css" href="jeu.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="jeux.css" media="screen" />
 
 </head>
 
 <body onload="init()">
     <h1>L'ile au trésor</h1>
-    <div id="scoreBouton">
-        <p>Votre score : </p>
-        <p id="scoreJoueur">0</p>
-        <div id="bouttonInit">
+   <div id="cadreContenu">
+        <div id="scoreBouton">
+            <p>Votre score : </p>
+            <p id="scoreJoueur">0</p>
+            <div id="bouttonInit">
+            </div>
+        </div> 
+        <div id="cadreLegende"> 
+            <table id ="legende">
+                <thead>
+                    <tr>
+                        <th> Légende </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="orange"> Bonne ligne</td> 
+                        <td id="jaune"> Bonne colonne </td> 
+                        <td id="rouge"> Mauvaise case </td>
+                        <td id="vert"> Tresor </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div> 
-    <div> 
-        <table id ="legende">
-            <thead>
-                <tr>
-                    <th> Légende </th>
-                </tr>
-            </thead>
-            <tbody>
-                
-                <tr>
-                    <td id="orange"> Bonne ligne</td> 
-                </tr>
-                <tr>
-                    <td id="jaune"> Bonne colonne </td> 
-                </tr>
-                <tr>
-                    <td id="rouge"> Mauvaise case </td>
-                </tr>
-                <tr>
-                    <td id="vert"> Tresor </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    
     <hr>
 
     <table id="carte"></table>  

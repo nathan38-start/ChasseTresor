@@ -1,11 +1,42 @@
+body
+{
+    font-size: 30px ;
+}
+
+h1{
+    margin: 0;
+    font-size: 50px;
+    text-align: center;
+}
+
+#cadreContenu
+{
+    display: flex;
+    flex-direction:row ;
+    width: 100%;
+}
+
+#scoreBouton
+{
+    width: 50%;
+}
+
+button
+{
+    height: 100px;
+}
+
+#cadreLegende
+{
+    width: 50% ;
+    
+}
+
 p 
 {
     display:inline-block ;
 }
 
-#legende {
-    font-size: 50px;
-}
 
 #carte
 {
