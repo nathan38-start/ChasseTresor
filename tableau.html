@@ -15,7 +15,23 @@
 
     <p>Nombre de coup(s) que vous avez joué : <span id="compte"></span></p>
     <hr>
-    <div id ="emplacement" class="cadre"> </div>
+    <div id ="emplacement" class="cadre"> 
+        <table id = 'legende'>
+            <thead>
+                <tr>
+                    <th colspan="2"> légende </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                   <td id= 'vert'> tresor </td>
+                   <td class = 'orange'> bonne ligne </td> 
+                   <td class = 'orange'> bone colonne</td>
+                   <td id= 'rouge'> mauvaise case </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     
     <table id="carte"></table>  
     <script type="text/javascript" src="test_tableau.js"></script>
