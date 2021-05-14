@@ -1,3 +1,6 @@
+//auteurs: Sébastien Meunier et Nathan Varin 
+//dernières modifications le 14 Mai 2021 
+ 
 //Variables globales
 var TableauJeu ;
 var tresorCarte="Trésor" ;
