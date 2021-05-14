@@ -67,7 +67,7 @@ if(!empty($_POST)){
 
         }
 
-        // ---- vérification mail 
+        // ---- vérification sex
         if(isset($sex)) {
             $r_sex = 1; // 1 = femme
             $checked = "checked";
@@ -85,4 +85,52 @@ if(!empty($_POST)){
             
         }
 
+// ---- verif mail
+
+if (empty($r_mail)){
+    $valid = false;
+    $er_mail = "Le mail ne peut pas être vide";
+
+}elseif (preg_match("/^[a-z0-9\-_.]\.[a-z]{2,3}", $r_mail));{
+    $valid = false;
+    $er_mail = "Le mai n'est pas valide";
+}else{
+    $req_mail = $DB->query("SELECT mail FROM user WHERE mail = ?", array($r_mail));
+
+    $req_mail = $res_mail->fetch();
+
+    if ($req_mail['mail'] <> ""){
+        $valid = false;
+        $er_mail = "Le mail existe déjà";
+    }
+}
+
+// ---- verif password 
+
+if (empty($r_psw)){
+    $valid = false;
+    $er_psw = "Le mot de passe ne doit pas être vide";
+
+}elseif(iconv_strlen($r_psw, "UTF-8")< 3) {
+    $valid = false;
+    $er_psw = "Le mot de passe doit faire plus de 3 caractères";
+
+}elseif{
+    ($r_psw != $confpsw){
+        $valid = false;
+        $er_psw = "La confirmation du mot de passe ne correspond pas ";
+
+    }
+}
     
+
+if($valid){
+
+    $date_registration_connection = date('Y-m-d H:i:s');
+    $r_birthday =  $year . "-" . $month . "-" . $days;
+
+    $DB ->insert("INSERT INTO user (pseudo, sex , birthday, mail, password, register) VALUES (?,?,?,?,?,?)",
+    array($r_lgn, $r_sew, $r_birthday, $r_mail, $script_password->password($r_psw), $date_registration_connection));
+
+    header('Location: ' . URL . 'p_inscription.php');
+}
