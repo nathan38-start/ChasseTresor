@@ -134,3 +134,43 @@ if($valid){
 
     header('Location: ' . URL . 'p_inscription.php');
 }
+
+    }
+
+}
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <base href="<? URL ?>"/>
+        <meta charset = "utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name = "viewport" content="width=device-widht, initial-scale=1">
+        <title> inscription </title>
+        <link href="<? = URL ?>css/jquery-ui.theme.min.css" rel="stylesheet" type ="text/css"/>  
+         <link href="<? = URL ?>css/jquery-ui.structure.min.css" rel="stylesheet" type = "text/css"/> 
+         <link href="<? = URL ?>css/jquery-ui.min.css" rel = "stylesheet" type = "text/css"/>
+         <link href="<? = URL ?>css/style.css" rel ="stylesheet" type="text/css"/>
+         <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         
+</head>
+
+<body>
+    <nav class = "navbar navbar-default navbar-static-top">
+        <div class ="container">
+            <div class = "navbar-header">
+                <button type = "button" class = "navbar-toggle collaspsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" onclick="myFunction(this)">
+                <span class = "sr-only">Toggle navigation</span>
+                <span class = "icon-bar1"></span>
+                <span class = "icon-bar2"></span> 
+                <span class = "icon-bar3"></span>
+                
+</button>
+<a class="navbar-brand" href = "<? = URL ?>">
+<span>Accueil</span>
+</a>
+</div>
+<div class ="collapse navbar-collapse" id ="bs-example-navbar-collapse-1">
+    <ul class ="nav navbar-nav navbar-right">
+        <li><a href="p_connexion.php"> Se connecter </a><li>
