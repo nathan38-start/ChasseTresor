@@ -85,7 +85,7 @@ if(!empty($_POST)){
             
         }
 
-// ---- verif mail
+// ---- verification du  mail
 
 if (empty($r_mail)){
     $valid = false;
@@ -105,7 +105,7 @@ if (empty($r_mail)){
     }
 }
 
-// ---- verif password 
+// ---- verification du mot de passe  
 
 if (empty($r_psw)){
     $valid = false;
