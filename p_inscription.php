@@ -76,7 +76,7 @@ if(!empty($_POST)){
             $checked = "checked";
         }
 
-        // verif date birthday 
+        // verification de  date birthday 
         if(!isset($day) && empty($day))  || (!isset($month) && empty($month)) || (!isset($year) && empty($year))){
             $valid = false;
             $er_birthday = "Entrez une date de naissance valide";
